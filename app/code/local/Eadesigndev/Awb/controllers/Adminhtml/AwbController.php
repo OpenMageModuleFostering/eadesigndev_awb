@@ -4,7 +4,7 @@
  *
  * @author Ea Design
  */
-class  Eadesigndev_Awb_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Action
+class  Eadesigndev_Awb_Adminhtml_AwbController extends Mage_Adminhtml_Controller_Action
 {
     /**
      * The index action on main extension pannel
@@ -20,7 +20,7 @@ class  Eadesigndev_Awb_Adminhtml_IndexController extends Mage_Adminhtml_Controll
         }
 
         $this->loadLayout();
-        $this->_setActiveMenu('awbadmin/adminhtml_index');
+        $this->_setActiveMenu('adminhtml/index');
         $this->_addBreadcrumb(Mage::helper('awb')->__('AWB Ne validate'), Mage::helper('awb')->__('AWB Ne validate'));
 
         $listBlock = $this->getLayout()->createBlock('awb/adminhtml_template_awb', 'awb-list');
@@ -44,7 +44,7 @@ class  Eadesigndev_Awb_Adminhtml_IndexController extends Mage_Adminhtml_Controll
 
         $this->_initTemplate('id');
 
-        $this->_setActiveMenu('awbadmin/adminhtml_index');
+        $this->_setActiveMenu('adminhtml/awb');
         $this->_title($this->__('AWB'))->_title($this->__('Edit AWB'));
 
         $this->_addBreadcrumb(Mage::helper('awb')

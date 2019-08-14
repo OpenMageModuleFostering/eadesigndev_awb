@@ -7,12 +7,12 @@
             <children>
                 <first_page module="awb">
                     <title>Lista AWB</title>
-                    <action>awbadmin/adminhtml_index</action>
+                    <action>adminhtml/awb</action>
                 </first_page>
                 <auc_preferinte module="awb">
                     <title>Settings</title>
                     <sort_order>10</sort_order>
-                    <action>awbadmin/adminhtml_index/settings</action>
+                    <action>adminhtml/awb/settings</action>
                 </auc_preferinte>
             </children>
         </awb_menu>
@@ -32,12 +32,12 @@
                             <first_page module="awb">
                                 <title>Templates</title>
                                 <sort_order>10</sort_order>
-                                <action>awbadmin/adminhtml_index</action>
+                                <action>adminhtml/awb</action>
                             </first_page>
                             <auc_preferinte module="awb">
                                 <title>Settings</title>
                                 <sort_order>10</sort_order>
-                                <action>awbadmin/adminhtml_index/settings</action>
+                                <action>adminhtml/awb/settings</action>
                             </auc_preferinte>
                         </children>
                     </awb_menu>

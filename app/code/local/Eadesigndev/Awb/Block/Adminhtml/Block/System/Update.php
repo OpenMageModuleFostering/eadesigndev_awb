@@ -12,7 +12,7 @@ class Eadesigndev_Awb_Block_Adminhtml_Block_System_Update extends Mage_Adminhtml
         }
 
         $this->setElement($element);
-        $url = Mage::helper('adminhtml')->getUrl('awbadmin/adminhtml_index/update');
+        $url = Mage::helper('adminhtml')->getUrl('adminhtml/awb/update');
 
         $html = $this->getLayout()->createBlock('adminhtml/widget_button')
             ->setType('button')

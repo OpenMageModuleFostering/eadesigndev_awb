@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Eadesigndev_Awb>
-            <version>1.0.7</version>
+            <version>1.0.8</version>
         </Eadesigndev_Awb>
     </modules>
     <global>
@@ -105,15 +105,27 @@
             </resources>
         </acl>
     </adminhtml>
+    <!--<admin>-->
+    <!--<routers>-->
+    <!--<awbadmin>-->
+    <!--<use>admin</use>-->
+    <!--<args>-->
+    <!--<module>Eadesigndev_Awb</module>-->
+    <!--<frontName>awbadmin</frontName>-->
+    <!--</args>-->
+    <!--</awbadmin>-->
+    <!--</routers>-->
+    <!--</admin>-->
     <admin>
         <routers>
-            <awbadmin>
-                <use>admin</use>
+            <adminhtml>
                 <args>
-                    <module>Eadesigndev_Awb</module>
-                    <frontName>awbadmin</frontName>
+                    <modules>
+                        <Eadesigndev_Awb after="Mage_Adminhtml">Eadesigndev_Awb_Adminhtml</Eadesigndev_Awb>
+                    </modules>
                 </args>
-            </awbadmin>
+            </adminhtml>
         </routers>
     </admin>
+
 </config>

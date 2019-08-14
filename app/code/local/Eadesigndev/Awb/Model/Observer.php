@@ -11,6 +11,13 @@ class Eadesigndev_Awb_Model_Observer
     public function addButtonShip($observer)
     {
 
+        $helper = Mage::helper('awb/urgent');
+        $isConnected = $helper->isConnected();
+
+        if (!$isConnected){
+            return $this;
+        }
+
         $container = $observer->getBlock();
 
         if (null !== $container && $container->getType() == 'adminhtml/sales_order_shipment_view') {
@@ -18,7 +25,7 @@ class Eadesigndev_Awb_Model_Observer
             $dataUrgent = array(
                 'label' => 'Genereaza awb Urgent',
                 'class' => 'awb-button',
-                'onclick' => 'setLocation(\' ' . Mage::helper("adminhtml")->getUrl("awbadmin/adminhtml_index/generate",
+                'onclick' => 'setLocation(\' ' . Mage::helper("adminhtml")->getUrl("adminhtml/awb/generate",
                         array(
                             'shippment_id' => $container->getShipment()->getId(),
                             'order_id' => $container->getShipment()->getOrderId(),
