@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<config>
+    <menu>
+        <awb_menu translate="title" module="awb">
+            <title>EaDesign</title>
+            <sort_order>50</sort_order>
+            <children>
+                <first_page module="awb">
+                    <title>Lista AWB</title>
+                    <action>awbadmin/adminhtml_index</action>
+                </first_page>
+                <auc_preferinte module="awb">
+                    <title>Settings</title>
+                    <sort_order>10</sort_order>
+                    <action>awbadmin/adminhtml_index/settings</action>
+                </auc_preferinte>
+            </children>
+        </awb_menu>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <awb_menu translate="title" module="awb">
+                        <title>EaDesign</title>
+                        <sort_order>50</sort_order>
+                        <children>
+                            <!-- child items go here -->
+                            <first_page module="awb">
+                                <title>Templates</title>
+                                <sort_order>10</sort_order>
+                                <action>awbadmin/adminhtml_index</action>
+                            </first_page>
+                            <auc_preferinte module="awb">
+                                <title>Settings</title>
+                                <sort_order>10</sort_order>
+                                <action>awbadmin/adminhtml_index/settings</action>
+                            </auc_preferinte>
+                        </children>
+                    </awb_menu>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

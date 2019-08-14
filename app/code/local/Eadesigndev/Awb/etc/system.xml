@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <eadesigndevconfig translate="label" module="awb">
+            <label>EaDesign</label>
+            <sort_order>999</sort_order>
+        </eadesigndevconfig>
+    </tabs>
+
+    <sections>
+        <awbopt translate="label" module="awb"> <!--Sections meniu stanga activ cu click-->
+            <label>EaDesign AWB</label>
+            <tab>eadesigndevconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <urgent_opt translate="label">
+                    <label>Urgent</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Activat</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <username translate="label">
+                            <label>Cont utilizator</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </username>
+                        <password translate="label">
+                            <label>Parola</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </password>
+                        <plantarifar translate="label" module="core">
+                            <label>Plan tarifar</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>awb/system_plantarifar</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </plantarifar>
+                        <punctridicare translate="label" module="core">
+                            <label>Punct ridicare</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>awb/system_punctridicare</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </punctridicare>
+                        <platatransport translate="label" module="core">
+                            <label>Plata transport</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>awb/system_platatransport</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </platatransport>
+                        <afisare translate="label" module="core">
+                            <label>Metoda plata</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>awb/system_tarifeafisate</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                        </afisare>
+                        <dechide translate="label">
+                            <label>Deschidere colet</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </dechide>
+                        <asigurare translate="label">
+                            <label>Asigurare</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </asigurare>
+                        <sambata translate="label">
+                            <label>Livrare sambata</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sambata>
+                        <pachet translate="label" module="core">
+                            <label>Afisare metode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>awb/system_pachet</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                        </pachet>
+                        <update translate="label" module="core">
+                            <label>Update Orase</label>
+                            <frontend_type>button</frontend_type>
+                            <frontend_model>awb/adminhtml_block_system_update</frontend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>required-entry</validate>
+                        </update>
+                    </fields>
+                </urgent_opt>
+            </groups>
+        </awbopt>
+    </sections>
+</config>
