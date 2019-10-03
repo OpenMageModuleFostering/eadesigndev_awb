@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Eadesigndev_Awb",
+    "name": "openmage-module-fostering\/eadesigndev_awb",
     "type": "magento-module",
-    "license": "Extension-license-name-(OSL-v3.0)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "The extension will generate the AWB for the Urgent Courier shipments.",
     "authors": [
